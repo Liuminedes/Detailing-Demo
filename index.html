@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Deluxe Car Detailing – Plataforma de Lavado y Detailing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fuente Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    body {
+      zoom: 110%;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont,
+        'Segoe UI', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-sky-50 text-slate-900 antialiased">
+  <!-- Contenedor principal -->
+  <div class="min-h-screen">
+    <!-- NAVBAR -->
+    <header class="border-b border-slate-200 bg-white/80 backdrop-blur">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-xl bg-sky-500 flex items-center justify-center shadow-sm">
+            <!-- logo icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 14s1-4 4-6 7-2 10 0 4 6 4 6" />
+              <path d="M4 16h16" />
+              <circle cx="8.5" cy="16.5" r="1.5" />
+              <circle cx="15.5" cy="16.5" r="1.5" />
+            </svg>
+          </div>
+          <div class="flex flex-col leading-tight">
+            <span class="text-sm font-semibold tracking-tight">Deluxe Car Detailing</span>
+            <span class="text-[11px] text-slate-500 -mt-0.5">Plataforma de lavado & detailing</span>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex items-center gap-6 text-sm text-slate-600">
+          <a href="#reservas" class="hover:text-sky-600">Reservar</a>
+          <a href="#servicios" class="hover:text-sky-600">Servicios</a>
+          <a href="#dashboard" class="hover:text-sky-600">Vista interna</a>
+          <a href="#rutas" class="hover:text-sky-600">Rutas Florida</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <button
+            class="hidden sm:inline-flex items-center gap-1.5 rounded-full border border-sky-100 bg-sky-50 px-3 py-1.5 text-xs font-medium text-sky-700 hover:bg-sky-100">
+            <!-- phone icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07A19.5 19.5 0 0 1 3.15 9.8 19.8 19.8 0 0 1 .08 1.94 2 2 0 0 1 2.06 0h3a2 2 0 0 1 2 1.72c.12.9.37 1.78.72 2.61a2 2 0 0 1-.45 2.11L6.1 7.7a16 16 0 0 0 6.2 6.2l1.26-1.23a2 2 0 0 1 2.11-.45c.83.35 1.71.6 2.61.72A2 2 0 0 1 22 16.92Z" />
+            </svg>
+            Demo rápida
+          </button>
+          <button
+            class="inline-flex items-center gap-1.5 rounded-full bg-sky-600 px-4 py-1.5 text-xs font-medium text-white shadow hover:bg-sky-700">
+            Ver propuesta PDF
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
+
+      <!-- HERO + BANNERS -->
+      <section class="grid lg:grid-cols-[2fr,2fr] gap-6 items-stretch">
+        <!-- Hero izquierda -->
+        <div
+          class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-sky-500 via-sky-400 to-sky-600 text-white p-6 sm:p-7 flex flex-col justify-between shadow-sm">
+          <div class="space-y-3">
+            <p class="text-xs uppercase tracking-[0.2em] text-sky-100/80">
+              Plataforma para lavado & detailing
+            </p>
+            <h1 class="text-2xl sm:text-3xl font-semibold leading-snug">
+              Todo tu servicio de detailing<br />
+              gestionado en un solo lugar.
+            </h1>
+            <p class="text-sm text-sky-50/90 max-w-md">
+              Reservas online, servicio a domicilio y control interno de cada vehículo:
+              desde que se agenda hasta que se entrega.
+            </p>
+          </div>
+          <div class="mt-5 flex items-center justify-between gap-4">
+            <div class="flex flex-col gap-1">
+              <button
+                class="inline-flex items-center justify-center gap-2 rounded-full bg-white text-sky-700 px-4 py-2 text-xs font-semibold shadow-sm hover:bg-sky-50">
+                <!-- cursor icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 12 9 6v12l2.5-4.5L15 18Z" />
+                </svg>
+                Simular reserva
+              </button>
+              <p class="text-[11px] text-sky-50/90">
+                Vista de prueba para presentar al cliente.
+              </p>
+            </div>
+            <div class="relative w-28 sm:w-32">
+              <div
+                class="absolute inset-0 rounded-full bg-sky-900/20 blur-2xl scale-125">
+              </div>
+              <img
+                src="https://images.pexels.com/photos/6873199/pexels-photo-6873199.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Car Detailing"
+                class="relative rounded-xl shadow-lg border border-sky-100 object-cover h-20 sm:h-24 w-full"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero derecha (2 tarjetas) -->
+        <div class="grid gap-4">
+          <div
+            class="rounded-2xl bg-gradient-to-r from-sky-100 to-sky-50 border border-sky-100 p-5 flex items-center justify-between gap-4">
+            <div class="space-y-1.5">
+              <p class="text-xs font-medium text-sky-700 uppercase tracking-[0.18em]">
+                Servicio a domicilio
+              </p>
+              <h2 class="text-sm sm:text-base font-semibold text-slate-900">
+                Lavado donde esté el cliente, con rutas optimizadas.
+              </h2>
+              <p class="text-xs text-slate-600">
+                El sistema sugiere rutas y organiza horarios para atender varias
+                ubicaciones en Florida sin perder productividad.
+              </p>
+            </div>
+            <div
+              class="hidden sm:flex items-center justify-center rounded-xl bg-white shadow px-3 py-2">
+              <!-- map pin icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-sky-500" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 21s-6-5.3-6-10a6 6 0 1 1 12 0c0 4.7-6 10-6 10Z" />
+                <circle cx="12" cy="11" r="2" />
+              </svg>
+            </div>
+          </div>
+
+          <div
+            class="rounded-2xl bg-white border border-slate-200 p-5 flex items-center justify-between gap-4 shadow-sm">
+            <div class="space-y-1.5">
+              <p class="text-xs font-medium text-slate-500 uppercase tracking-[0.18em]">
+                Centro físico (opcional)
+              </p>
+              <h2 class="text-sm sm:text-base font-semibold text-slate-900">
+                Agenda separada para sede y servicio móvil.
+              </h2>
+              <p class="text-xs text-slate-600">
+                Si existe un punto físico, la plataforma diferencia turnos de
+                taller y salidas a domicilio de forma clara.
+              </p>
+            </div>
+            <div
+              class="hidden sm:flex items-center justify-center rounded-xl bg-sky-50 px-3 py-2">
+              <!-- garage icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-sky-600" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 10L12 3l9 7" />
+                <path d="M5 10v10h14V10" />
+                <path d="M9 21v-6h6v6" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESERVAS / BUSCADOR (SECCIÓN DEMO) -->
+      <section id="reservas" class="space-y-4">
+        <div class="flex items-center justify-between">
+          <h2 class="text-sm font-semibold tracking-[0.18em] text-slate-500 uppercase flex items-center gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
+            Módulo de reservas (vista cliente)
+          </h2>
+          <span
+            class="hidden sm:inline-flex items-center gap-1 rounded-full bg-white px-3 py-1 text-[11px] font-medium text-slate-600 border border-slate-200">
+            <!-- mouse icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-slate-500" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="6" y="2" width="12" height="20" rx="6" />
+              <path d="M12 6v4" />
+            </svg>
+            Ejemplo de interacción
+          </span>
+        </div>
+
+        <div
+          class="rounded-2xl bg-white border border-slate-200 px-4 py-4 sm:px-6 sm:py-5 shadow-sm space-y-4">
+          <div class="grid md:grid-cols-4 gap-3 text-xs sm:text-sm">
+            <!-- Ubicación -->
+            <div class="space-y-1.5">
+              <label class="block text-xs font-medium text-slate-600">Ubicación (Florida)</label>
+              <div class="relative">
+                <select
+                  class="w-full rounded-xl border-slate-200 bg-slate-50 px-3 py-2 pr-8 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-sky-400 focus:border-sky-400">
+                  <option>Miami</option>
+                  <option>Orlando</option>
+                  <option>Tampa</option>
+                  <option>Fort Lauderdale</option>
+                  <option>West Palm Beach</option>
+                </select>
+                <span class="pointer-events-none absolute inset-y-0 right-2 flex items-center text-slate-400">
+                  ▼
+                </span>
+              </div>
+            </div>
+
+            <!-- Modalidad -->
+            <div class="space-y-1.5">
+              <label class="block text-xs font-medium text-slate-600">Modalidad de servicio</label>
+              <div class="grid grid-cols-2 gap-1.5">
+                <button
+                  class="rounded-xl border border-sky-500 bg-sky-50 px-2 py-2 text-[11px] sm:text-xs font-medium text-sky-700 flex items-center justify-center gap-1">
+                  <!-- house icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 10L12 3l9 7" />
+                    <path d="M5 10v10h14V10" />
+                  </svg>
+                  A domicilio
+                </button>
+                <button
+                  class="rounded-xl border border-slate-200 bg-white px-2 py-2 text-[11px] sm:text-xs text-slate-600 hover:border-sky-300 hover:text-sky-700">
+                  En sede
+                </button>
+              </div>
+            </div>
+
+            <!-- Fecha -->
+            <div class="space-y-1.5">
+              <label class="block text-xs font-medium text-slate-600">Fecha</label>
+              <input
+                type="date"
+                class="w-full rounded-xl border-slate-200 bg-slate-50 px-3 py-2 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-sky-400 focus:border-sky-400"
+              />
+            </div>
+
+            <!-- Hora -->
+            <div class="space-y-1.5">
+              <label class="block text-xs font-medium text-slate-600">Horario disponible</label>
+              <select
+                class="w-full rounded-xl border-slate-200 bg-slate-50 px-3 py-2 pr-8 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-sky-400 focus:border-sky-400">
+                <option>09:00 - 10:00 AM</option>
+                <option>10:00 - 11:00 AM</option>
+                <option>02:00 - 03:00 PM</option>
+                <option>03:00 - 04:00 PM</option>
+                <option>04:00 - 05:00 PM</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-[2fr,1fr] gap-3 text-xs sm:text-sm">
+            <!-- Tipo de vehículo / servicio -->
+            <div class="grid sm:grid-cols-2 gap-3">
+              <div class="space-y-1.5">
+                <label class="block text-xs font-medium text-slate-600">Tipo de vehículo</label>
+                <select
+                  class="w-full rounded-xl border-slate-200 bg-slate-50 px-3 py-2 pr-8 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-sky-400 focus:border-sky-400">
+                  <option>Sedán</option>
+                  <option>SUV</option>
+                  <option>Pickup</option>
+                  <option>Deportivo</option>
+                </select>
+              </div>
+              <div class="space-y-1.5">
+                <label class="block text-xs font-medium text-slate-600">Tipo de paquete</label>
+                <select
+                  class="w-full rounded-xl border-slate-200 bg-slate-50 px-3 py-2 pr-8 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-sky-400 focus:border-sky-400">
+                  <option>Lavado exterior básico</option>
+                  <option>Detailing interior</option>
+                  <option>Full detailing (interior + exterior)</option>
+                  <option>Ceramic coating</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Botón reservar -->
+            <div class="flex items-end justify-end">
+              <button
+                class="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-sky-600 px-4 py-2.5 text-xs sm:text-sm font-semibold text-white shadow hover:bg-sky-700">
+                <!-- calendar-plus icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" />
+                  <path d="M16 2v4" />
+                  <path d="M8 2v4" />
+                  <path d="M3 10h18" />
+                  <path d="M12 14v4" />
+                  <path d="M10 16h4" />
+                </svg>
+                Reservar servicio demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICIOS DESTACADOS -->
+      <section id="servicios" class="space-y-4">
+        <div class="flex items-center justify-between">
+          <h2 class="text-sm font-semibold tracking-[0.18em] text-slate-500 uppercase flex items-center gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+            Servicios de detailing destacados
+          </h2>
+          <button class="text-xs text-sky-600 hover:text-sky-700 font-medium">
+            Ver todos los paquetes
+          </button>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <!-- Card servicio -->
+          <article
+            class="rounded-2xl bg-white border border-slate-200 shadow-sm p-4 flex flex-col gap-3">
+            <div class="flex items-center justify-between gap-2">
+              <h3 class="text-sm font-semibold text-slate-900">Lavado exterior básico</h3>
+              <span class="text-[11px] rounded-full bg-sky-50 px-2 py-0.5 text-sky-700 border border-sky-100">
+                45–60 min
+              </span>
+            </div>
+            <p class="text-xs text-slate-600">
+              Enfoque en pintura, llantas y cristales. Ideal para mantenimiento
+              frecuente y servicios express.
+            </p>
+            <p class="text-sm font-semibold text-slate-900">Desde 10</p>
+          </article>
+
+          <article
+            class="rounded-2xl bg-white border border-slate-200 shadow-sm p-4 flex flex-col gap-3">
+            <div class="flex items-center justify-between gap-2">
+              <h3 class="text-sm font-semibold text-slate-900">Detailing interior</h3>
+              <span class="text-[11px] rounded-full bg-sky-50 px-2 py-0.5 text-sky-700 border border-sky-100">
+                60–90 min
+              </span>
+            </div>
+            <p class="text-xs text-slate-600">
+              Aspirado profundo, limpieza de tapicería, paneles, plásticos y
+              detalles finos del interior.
+            </p>
+            <p class="text-sm font-semibold text-slate-900">Desde $20</p>
+          </article>
+
+          <article
+            class="rounded-2xl bg-white border border-slate-200 shadow-sm p-4 flex flex-col gap-3">
+            <div class="flex items-center justify-between gap-2">
+              <h3 class="text-sm font-semibold text-slate-900">
+                Full detailing
+              </h3>
+              <span class="text-[11px] rounded-full bg-sky-50 px-2 py-0.5 text-sky-700 border border-sky-100">
+                2–3 h
+              </span>
+            </div>
+            <p class="text-xs text-slate-600">
+              Interior + exterior con foco en brillo y protección, ideal para
+              clientes exigentes.
+            </p>
+            <p class="text-sm font-semibold text-slate-900">Desde $30</p>
+          </article>
+
+          <article
+            class="rounded-2xl bg-white border border-slate-200 shadow-sm p-4 flex flex-col gap-3">
+            <div class="flex items-center justify-between gap-2">
+              <h3 class="text-sm font-semibold text-slate-900">
+                Ceramic coating
+              </h3>
+              <span class="text-[11px] rounded-full bg-sky-50 px-2 py-0.5 text-sky-700 border border-sky-100">
+                Proyecto especial
+              </span>
+            </div>
+            <p class="text-xs text-slate-600">
+              Protección prolongada de la pintura con recubrimiento cerámico.
+            </p>
+            <p class="text-sm font-semibold text-slate-900">A convenir</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- VISTA INTERNA / DASHBOARD DEMO -->
+      <section id="dashboard" class="space-y-4">
+        <div class="flex items-center justify-between">
+          <h2 class="text-sm font-semibold tracking-[0.18em] text-slate-500 uppercase flex items-center gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span>
+            Vista interna (dashboard de ejemplo)
+          </h2>
+          <span
+            class="inline-flex items-center gap-1 rounded-full bg-white px-3 py-1 text-[11px] font-medium text-slate-600 border border-slate-200">
+            <!-- activity icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-indigo-500" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+            </svg>
+            Vista para gerencia / operación
+          </span>
+        </div>
+
+        <div class="grid lg:grid-cols-[2fr,2fr] gap-5">
+          <!-- Cards de KPIs -->
+          <div class="space-y-3">
+            <div class="grid grid-cols-2 gap-3">
+              <div
+                class="rounded-2xl bg-white border border-slate-200 px-4 py-3 flex flex-col gap-1 shadow-sm">
+                <p class="text-[11px] text-slate-500">Servicios de hoy</p>
+                <p class="text-xl font-semibold text-slate-900">18</p>
+                <p class="text-[11px] text-emerald-600 flex items-center gap-1">
+                  <!-- arrow-up -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12l7-7 7 7" />
+                    <path d="M12 19V5" />
+                  </svg>
+                  +4 vs ayer
+                </p>
+              </div>
+              <div
+                class="rounded-2xl bg-white border border-slate-200 px-4 py-3 flex flex-col gap-1 shadow-sm">
+                <p class="text-[11px] text-slate-500">
+                  A domicilio / en sede
+                </p>
+                <p class="text-xl font-semibold text-slate-900">12 / 6</p>
+                <p class="text-[11px] text-slate-500">
+                  Foco principal en servicio móvil.
+                </p>
+              </div>
+            </div>
+
+            <!-- Mini calendario -->
+            <div class="rounded-2xl bg-white border border-slate-200 p-4 shadow-sm space-y-3">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-xs text-slate-500">Agenda semanal</p>
+                  <p class="text-sm font-semibold text-slate-900">
+                    02 – 08 Dic 2025
+                  </p>
+                </div>
+                <div class="flex items-center gap-2">
+                  <button
+                    class="w-6 h-6 rounded-full border border-slate-200 flex items-center justify-center text-slate-500 text-xs hover:border-sky-300 hover:text-sky-700">
+                    ‹
+                  </button>
+                  <button
+                    class="w-6 h-6 rounded-full border border-slate-200 flex items-center justify-center text-slate-500 text-xs hover:border-sky-300 hover:text-sky-700">
+                    ›
+                  </button>
+                </div>
+              </div>
+              <div class="grid grid-cols-7 gap-1 text-[11px] text-center">
+                <span class="text-slate-500">Lun</span>
+                <span class="text-slate-500">Mar</span>
+                <span class="text-slate-500">Mié</span>
+                <span class="text-slate-500">Jue</span>
+                <span class="text-slate-500">Vie</span>
+                <span class="text-slate-500">Sáb</span>
+                <span class="text-slate-500">Dom</span>
+
+                <span class="rounded-lg bg-slate-50 py-1">2</span>
+                <span class="rounded-lg bg-sky-100 text-sky-700 font-medium py-1">
+                  3
+                </span>
+                <span class="rounded-lg bg-slate-50 py-1">4</span>
+                <span class="rounded-lg bg-slate-50 py-1">5</span>
+                <span class="rounded-lg bg-slate-50 py-1">6</span>
+                <span class="rounded-lg bg-slate-50 py-1">7</span>
+                <span class="rounded-lg bg-slate-50 py-1">8</span>
+              </div>
+              <p class="text-[11px] text-slate-500">
+                El calendario real permitirá ver cargas por franja horaria, tanto a domicilio
+                como en sede.
+              </p>
+            </div>
+          </div>
+
+          <!-- Lista de clientes y vehículos -->
+          <div
+            class="rounded-2xl bg-white border border-slate-200 p-4 shadow-sm space-y-3">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-xs text-slate-500">Próximos servicios (demo)</p>
+                <p class="text-sm font-semibold text-slate-900">
+                  Clientes y vehículos en Florida
+                </p>
+              </div>
+              <span
+                class="inline-flex items-center gap-1 rounded-full bg-sky-50 px-3 py-1 text-[11px] font-medium text-sky-700 border border-sky-100">
+                <!-- users icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="3" />
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+                Vista demo
+              </span>
+            </div>
+
+            <div class="space-y-2 text-xs">
+              <!-- fila -->
+              <div
+                class="grid grid-cols-[1.6fr,1.6fr,1fr,1fr] gap-2 rounded-xl bg-slate-50 px-3 py-2 items-center">
+                <div class="flex flex-col">
+                  <span class="font-medium text-slate-900">Carlos M.</span>
+                  <span class="text-[11px] text-slate-500">Miami, FL</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-medium text-slate-800">BMW 3 Series · Blanco</span>
+                  <span class="text-[11px] text-slate-500">Sedán · Placa DEMO123</span>
+                </div>
+                <span class="text-[11px] text-sky-700 font-medium">
+                  Detailing interior
+                </span>
+                <span class="text-[11px] text-emerald-700 font-medium">
+                  10:00 AM · Domicilio
+                </span>
+              </div>
+
+              <div
+                class="grid grid-cols-[1.6fr,1.6fr,1fr,1fr] gap-2 rounded-xl px-3 py-2 items-center hover:bg-slate-50">
+                <div class="flex flex-col">
+                  <span class="font-medium text-slate-900">Ana R.</span>
+                  <span class="text-[11px] text-slate-500">Orlando, FL</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-medium text-slate-800">Tesla Model 3 · Azul</span>
+                  <span class="text-[11px] text-slate-500">Sedán · Placa EVTEST</span>
+                </div>
+                <span class="text-[11px] text-sky-700 font-medium">
+                  Full detailing
+                </span>
+                <span class="text-[11px] text-amber-700 font-medium">
+                  02:30 PM · Sede
+                </span>
+              </div>
+
+              <div
+                class="grid grid-cols-[1.6fr,1.6fr,1fr,1fr] gap-2 rounded-xl px-3 py-2 items-center hover:bg-slate-50">
+                <div class="flex flex-col">
+                  <span class="font-medium text-slate-900">Luis G.</span>
+                  <span class="text-[11px] text-slate-500">Tampa, FL</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-medium text-slate-800">Ford F-150 · Negro</span>
+                  <span class="text-[11px] text-slate-500">Pickup · Placa WORKFL</span>
+                </div>
+                <span class="text-[11px] text-sky-700 font-medium">
+                  Lavado exterior
+                </span>
+                <span class="text-[11px] text-emerald-700 font-medium">
+                  04:00 PM · Domicilio
+                </span>
+              </div>
+            </div>
+            <p class="text-[11px] text-slate-500">
+              En la plataforma real, esta tabla se alimenta de las reservas y
+              muestra estados, notas internas y asignación de colaboradores.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- RUTAS EN FLORIDA -->
+      <section id="rutas" class="space-y-4">
+        <div class="flex items-center justify-between">
+          <h2 class="text-sm font-semibold tracking-[0.18em] text-slate-500 uppercase flex items-center gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+            Gestión de rutas en Florida (servicio a domicilio)
+          </h2>
+        </div>
+
+        <div class="grid lg:grid-cols-[3fr,2fr] gap-5">
+          <!-- Mapa ficticio -->
+          <div
+            class="relative rounded-2xl overflow-hidden bg-gradient-to-br from-sky-200 via-sky-100 to-sky-50 border border-sky-100 shadow-sm p-4">
+            <div class="flex items-center justify-between mb-3">
+              <div>
+                <p class="text-xs text-slate-600">Mapa de ejemplo</p>
+                <p class="text-sm font-semibold text-slate-900">
+                  Citas a domicilio – Área Florida
+                </p>
+              </div>
+              <div
+                class="inline-flex items-center gap-1 rounded-full bg-white/80 px-3 py-1 text-[11px] font-medium text-slate-600 border border-slate-200">
+                <!-- route icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-emerald-600" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 5h4l2 5-2 5H3Z" />
+                  <path d="M7 5h4l2 5-2 5H7Z" />
+                  <path d="M15 5h4l2 5-2 5h-4Z" />
+                </svg>
+                Optimización visual
+              </div>
+            </div>
+
+            <div
+              class="h-56 rounded-xl bg-sky-900/5 border border-sky-200/60 relative overflow-hidden">
+              <!-- “Mapa” simplificado -->
+              <div class="absolute inset-0 opacity-80">
+                <div class="w-[140%] h-[140%] bg-[radial-gradient(circle_at_20%_20%,rgba(59,130,246,0.25),transparent_60%),radial-gradient(circle_at_80%_60%,rgba(14,165,233,0.25),transparent_55%)] translate-x-[-10%] translate-y-[-10%]">
+                </div>
+              </div>
+
+              <!-- Puntos de ciudad -->
+              <div class="relative z-10 h-full w-full p-4 text-xs text-white">
+                <div class="absolute left-8 top-8">
+                  <div
+                    class="inline-flex items-center gap-1 rounded-full bg-sky-600 px-2 py-1 shadow-sm text-[11px]">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-300"></span>
+                    Miami · 7 servicios
+                  </div>
+                </div>
+                <div class="absolute right-10 top-14">
+                  <div
+                    class="inline-flex items-center gap-1 rounded-full bg-sky-500 px-2 py-1 shadow-sm text-[11px]">
+                    <span class="w-1.5 h-1.5 rounded-full bg-amber-300"></span>
+                    Orlando · 5 servicios
+                  </div>
+                </div>
+                <div class="absolute left-16 bottom-10">
+                  <div
+                    class="inline-flex items-center gap-1 rounded-full bg-sky-700 px-2 py-1 shadow-sm text-[11px]">
+                    <span class="w-1.5 h-1.5 rounded-full bg-sky-200"></span>
+                    Tampa · 3 servicios
+                  </div>
+                </div>
+                <!-- Conexiones de ruta (líneas simples) -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 w-full h-full" viewBox="0 0 200 120">
+                  <path d="M40 30 C80 40 120 45 150 50" stroke="rgba(56,189,248,0.7)" stroke-width="2" fill="none"
+                    stroke-linecap="round" stroke-dasharray="4 3" />
+                  <path d="M40 30 C60 60 70 80 80 90" stroke="rgba(96,165,250,0.7)" stroke-width="2" fill="none"
+                    stroke-linecap="round" stroke-dasharray="4 3" />
+                  <path d="M80 90 C120 70 145 60 150 50" stroke="rgba(45,212,191,0.7)" stroke-width="2" fill="none"
+                    stroke-linecap="round" stroke-dasharray="4 3" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Texto explicativo -->
+          <div
+            class="rounded-2xl bg-white border border-slate-200 p-4 shadow-sm space-y-3 text-sm text-slate-700">
+            <h3 class="text-sm font-semibold text-slate-900 flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+              Ejemplo de gestión de rutas a domicilio
+            </h3>
+            <p>
+              La versión real de la plataforma mostrará en un mapa interactivo todas las
+              citas a domicilio del día, permitiendo agrupar por zonas, asignar rutas a
+              cada colaborador y respetar los horarios seleccionados por los clientes.
+            </p>
+            <ul class="space-y-1.5 text-sm">
+              <li>• Vista consolidada de servicios a domicilio por ciudad o sector.</li>
+              <li>• Rutas sugeridas según agenda y tiempos de desplazamiento.</li>
+              <li>• Estados específicos: “En ruta”, “En domicilio”, “Servicio completado”.</li>
+              <li>• Sincronización con la agenda interna para evitar solapamientos.</li>
+            </ul>
+            <p class="text-xs text-slate-500">
+              Esta demo ilustra cómo se presentará visualmente el concepto al cliente,
+              manteniendo un lenguaje claro y directo, sin entrar todavía en detalles
+              técnicos.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CÓMO FUNCIONA -->
+      <section class="space-y-4">
+        <h2 class="text-sm font-semibold tracking-[0.18em] text-slate-500 uppercase flex items-center gap-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-slate-900"></span>
+          Flujo general de uso
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-4 text-sm">
+          <div class="rounded-2xl bg-white border border-slate-200 p-4 space-y-2">
+            <div
+              class="w-8 h-8 rounded-xl bg-sky-100 flex items-center justify-center text-sky-600">
+              <!-- 1 icon -->
+              <span class="text-xs font-semibold">1</span>
+            </div>
+            <h3 class="text-sm font-semibold text-slate-900">
+              El cliente reserva en línea
+            </h3>
+            <p class="text-xs text-slate-600">
+              Desde la landing, el cliente elige modalidad (domicilio/sede), fecha, hora,
+              tipo de vehículo y paquete de servicio.
+            </p>
+          </div>
+
+          <div class="rounded-2xl bg-white border border-slate-200 p-4 space-y-2">
+            <div
+              class="w-8 h-8 rounded-xl bg-sky-100 flex items-center justify-center text-sky-600">
+              <span class="text-xs font-semibold">2</span>
+            </div>
+            <h3 class="text-sm font-semibold text-slate-900">
+              El equipo ve la orden en el dashboard
+            </h3>
+            <p class="text-xs text-slate-600">
+              La reserva llega a la agenda interna, se muestra en la lista de servicios,
+              se asigna a un colaborador y se integra en la ruta del día.
+            </p>
+          </div>
+
+          <div class="rounded-2xl bg-white border border-slate-200 p-4 space-y-2">
+            <div
+              class="w-8 h-8 rounded-xl bg-sky-100 flex items-center justify-center text-sky-600">
+              <span class="text-xs font-semibold">3</span>
+            </div>
+            <h3 class="text-sm font-semibold text-slate-900">
+              El cliente recibe actualizaciones
+            </h3>
+            <p class="text-xs text-slate-600">
+              A medida que el servicio cambia de estado, el sistema envía notificaciones
+              (correo/SMS) con información clara y profesional.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-200 mt-10 bg-white/60">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p class="text-[11px] text-slate-500">
+          Vista demo de plataforma · Propuesta de trabajo, no ambiente real de producción.
+        </p>
+        <p class="text-[11px] text-slate-500">
+          Diseñado por <span class="font-medium text-slate-700">Vyntra Orbit</span>
+        </p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
